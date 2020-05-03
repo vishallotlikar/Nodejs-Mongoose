@@ -25,13 +25,13 @@
 			"response": []
 		},
 		{
-			"name": "Create a new user",
+			"name": "Create a new user (create)",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"vishal\",\n\t\"email\": \"vishal1@gmail.com\",\n\t\"password\": \"vishal\"\n}",
+					"raw": "{\n\t\"username\": \"vishal\",\n\t\"email\": \"vishal3@gmail.com\",\n\t\"password\": \"vishal\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,7 +39,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/user/createNew",
+					"raw": "http://localhost:9000/api/user/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -48,7 +48,172 @@
 					"path": [
 						"api",
 						"user",
-						"createNew"
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new user (save)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"vishal\",\n\t\"email\": \"vishal4@gmail.com\",\n\t\"password\": \"vishal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/user/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/user/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"user",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find a user by an email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/user/find/vishal@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"user",
+						"find",
+						"vishal@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Lotlikar11\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/user/update/vishal@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"user",
+						"update",
+						"vishal@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a user by email",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/user/delete/vishal3@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"user",
+						"delete",
+						"vishal3@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"vishal2@gmail.com\",\n\t\"password\": \"vishal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"user",
+						"login"
 					]
 				}
 			},
